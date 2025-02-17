@@ -12,19 +12,19 @@ function App() {
       element:(<div><h1>welcome</h1><Outlet /></div>),
       children: [
         {
-          path: "register",
+          path: "/register",
           element: <UserRegistrationForm />,
         },
         {
-          path: "login",
+          path: "/login",
           element: <LoginForm />,
         },
         {
-          path: "me",
+          path: "/me",
           element: <Me />,
         },
         {
-          path: "updatepassword",
+          path: "/updatepassword",
           element: <UpdatePassword />,
         },
       ],
