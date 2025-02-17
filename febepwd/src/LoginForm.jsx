@@ -61,7 +61,7 @@ const LoginForm = () => {
   };
   const handleForgotPassword = () => {
     axios
-      .post("https://be-auth-pwd.onrender.com//auth/forgotPassword/", {
+      .post("https://be-auth-pwd.onrender.com/auth/forgotPassword/", {
         email: email,
       })
       .then(function (response) {

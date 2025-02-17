@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserRegistrationForm from "./UserRegistrationForm";
 import LoginForm from "./LoginForm";
 import Me from "./Me";
@@ -9,9 +9,10 @@ function App() {
   const routes = [
     {
       path: "/",
+      element:(<div><h1>welcome</h1><Outlet /></div>),
       children: [
         {
-          path: "register",
+          path: "/register",
           element: <UserRegistrationForm />,
         },
         {
