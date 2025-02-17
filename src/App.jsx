@@ -9,30 +9,24 @@ function App() {
   const routes = [
     {
       path: "/",
-      element:(<div><h1>welcome</h1> <Link to={`/register`}>register</Link>
-      <Link to={`/login`}>login</Link>
-      <Link to={`/me`}>me</Link>
-      <Link to={`/updatepassword`}>changepassword</Link>
-      <Outlet /></div>),
-      children: [
-        {
-          path: "/register",
-          element: <UserRegistrationForm />,
-        },
-        {
-          path: "/login",
-          element: <LoginForm />,
-        },
-        {
-          path: "/me",
-          element: <Me />,
-        },
-        {
-          path: "/updatepassword",
-          element: <UpdatePassword />,
-        },
-      ],
-    },
+      element:(<><h1>welcome</h1> <Link to={`/register`}>register</Link></>),
+      },
+      {
+        path: "/register",
+        element: <UserRegistrationForm />,
+      },
+      {
+        path: "/login",
+        element: <LoginForm />,
+      },
+      {
+        path: "/me",
+        element: <Me />,
+      },
+      {
+        path: "/updatepassword",
+        element: <UpdatePassword />,
+      },
   ];
   const router = createBrowserRouter(routes, {
     future: {
