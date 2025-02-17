@@ -9,6 +9,7 @@ function App() {
   const routes = [
     {
       path: "/",
+      element: <h1>Welcome</h1>,
       children: [
         {
           path: "/register",
