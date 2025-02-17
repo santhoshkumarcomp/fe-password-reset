@@ -38,7 +38,7 @@ const UserRegistrationForm = () => {
       // Handle successful registration here
       console.log("Registration successful:", formData);
       axios
-        .post("https://be-auth-5ggr.onrender.com/auth/register/", {
+        .post("https://be-auth-pwd.onrender.com/auth/register/", {
           username: formData.username,
           email: formData.email,
           password: formData.password,

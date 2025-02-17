@@ -26,14 +26,14 @@ const LoginForm = () => {
       // Handle login logic here (e.g., API call to authenticate user)
 
       axios
-        .post("https://be-auth-5ggr.onrender.com/auth/login/", {
+        .post("https://be-auth-pwd.onrender.com/auth/login/", {
           email: email,
           password: password,
         })
         .then(function (response) {
           console.log(response);
           if (response.data.token.length > 0) {
-            const API_URL = "https://be-auth-5ggr.onrender.com/auth/me/";
+            const API_URL = "https://be-auth-pwd.onrender.com/auth/me/";
             const BEARER_TOKEN = response.data.token;
 
             axios
@@ -61,7 +61,7 @@ const LoginForm = () => {
   };
   const handleForgotPassword = () => {
     axios
-      .post("https://be-auth-5ggr.onrender.com/auth/forgotPassword/", {
+      .post("https://be-auth-pwd.onrender.com//auth/forgotPassword/", {
         email: email,
       })
       .then(function (response) {
