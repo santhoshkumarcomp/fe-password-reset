@@ -10,6 +10,9 @@ function App() {
     {
       path: "/",
       element:(<div><h1>welcome</h1> <Link to={`/register`}>register</Link>
+      <Link to={`/login`}>login</Link>
+      <Link to={`/me`}>me</Link>
+      <Link to={`/updatepassword`}>changepassword</Link>
       <Outlet /></div>),
       children: [
         {
