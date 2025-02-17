@@ -17,7 +17,7 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
       setError("Both fields are required!");
@@ -25,18 +25,18 @@ const LoginForm = () => {
       setError("");
       // Handle login logic here (e.g., API call to authenticate user)
 
-      axios
+      await axios
         .post("https://be-auth-pwd.onrender.com/auth/login/", {
           email: email,
           password: password,
         })
-        .then(function (response) {
+        .then(async function (response) {
           console.log(response);
           if (response.data.token.length > 0) {
             const API_URL = "https://be-auth-pwd.onrender.com/auth/me/";
             const BEARER_TOKEN = response.data.token;
 
-            axios
+            await axios
               .get(API_URL, {
                 headers: {
                   Authorization: `Bearer ${BEARER_TOKEN}`,
